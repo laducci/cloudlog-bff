@@ -1,0 +1,32 @@
+{
+  "name": "cloudlog-bff",
+  "version": "1.0.0",
+  "description": "CloudLog - BFF (Backend for Frontend) - agrega Entregas, Frota e Azure Function com Clean Architecture + Vertical Slice",
+  "private": true,
+  "main": "dist/API/server.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/API/server.js",
+    "dev": "tsc -p tsconfig.build.json && node dist/API/server.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit tests/api",
+    "test:arch": "vitest run tests/architecture"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.0",
+    "@types/supertest": "^6.0.2",
+    "@types/swagger-ui-express": "^4.1.7",
+    "archunit": "^2.5.4",
+    "supertest": "^7.0.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
